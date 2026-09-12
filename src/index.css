@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0d0d14;
+  --bg-secondary: #14141f;
+  --bg-tertiary: #1c1c2b;
+  --bg-elevated: #22222f;
+  --border: #2a2a3d;
+  --border-light: #353548;
+  --text-primary: #e8e8f0;
+  --text-secondary: #9999b0;
+  --text-muted: #6b6b85;
+  --accent: #ff7849;
+  --accent-hover: #ff6a35;
+  --accent-soft: rgba(255, 120, 73, 0.12);
+  --teal: #2dd4bf;
+  --teal-soft: rgba(45, 212, 191, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-light);
+  border-radius: 5px;
+  border: 2px solid var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #454558;
+}
+
+/* Code editor scrollbar */
+.code-scroll::-webkit-scrollbar-thumb {
+  background: #33334a;
+  border-radius: 5px;
+  border: 2px solid var(--bg-tertiary);
+}
+.code-scroll::-webkit-scrollbar-thumb:hover {
+  background: #444458;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-8px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 var(--accent-soft); }
+  50% { box-shadow: 0 0 20px 4px var(--accent-soft); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.animate-fadeIn { animation: fadeIn 0.3s ease; }
+.animate-slideIn { animation: slideIn 0.2s ease; }
+
+/* Tab indicator */
+.tab-active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px 2px 0 0;
+}
+
+/* Textarea reset */
+textarea {
+  font-family: inherit;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+/* Selection */
+::selection {
+  background: rgba(255, 120, 73, 0.25);
+}
+
+/* Spinner */
+.spinner {
+  animation: spin 0.6s linear infinite;
+}
