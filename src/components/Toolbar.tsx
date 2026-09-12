@@ -41,7 +41,7 @@ export default function Toolbar({
           <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-[#ff7849] to-[#ff4d6d]">
             <Code2 size={16} className="text-white" />
           </div>
-          <span className="text-sm font-semibold text-[#e8e8f0]">HTML Viewer</span>
+          <span className="text-sm font-semibold text-[#e8e8f0]">Sandbox.js</span>
         </div>
 
         <div className="flex items-center gap-0.5 rounded-lg bg-[#0d0d14] p-0.5">
