@@ -1,0 +1,7 @@
+{
+    "name": "sandboxjs", 
+    "author": "itsAsanali", 
+    "language": "ts, react",
+    "license": "none",
+    "encoding": "UTF-8"
+}
