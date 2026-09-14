@@ -1,7 +1,7 @@
 {
-    "name": "sandboxjs", 
-    "author": "itsAsanali", 
-    "language": "ts, react",
-    "license": "none",
-    "encoding": "UTF-8"
+    "name": "sandboxjs",
+    "author": "asanaIi",
+    "language": "typescript",
+    "license": "none",
+    "encoding": "UTF-8"
 }
